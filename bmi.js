@@ -7,8 +7,6 @@ class Maincomp extends React.Component {
 		this.handlefeet = this.handlefeet.bind(this);
 		this.handleinch = this.handleinch.bind(this);
 	}
-
-
 	handlekgs(event) {
 		const cal = event.target.value;
 		console.log('kgs = ',cal);		
@@ -18,14 +16,12 @@ class Maincomp extends React.Component {
 		this.setState({weights:this.state.weights});
 		console.log(this.state.weights);
 	}
-
 	handlepounds(event) {
 		const temp = event.target.value;
 		const change = temp * 0.45;
 		this.state.weights.pounds = temp;
 		this.state.weights.kgs = change;
 		this.setState({weights:this.state.weights});
-
 		
 	}
 
@@ -57,13 +53,9 @@ class Maincomp extends React.Component {
 			<label> Enter the Weight in Kgs </label>
 			<input type="text" value={this.state.weights.kgs} onChange={this.handlekgs}  />
 			<br/> <br/>
-
 			<label> Enter Weight In Pounds  </label>
-			
 			<input type="text" value={this.state.weights.pounds} onChange={this.handlepounds} />
-			
 			<br/> <br/>
-
 			<h3> <i> Height Converter </i> </h3>
 			<label> Enter the Height in feet </label>
 			<input type="text" value={this.state.weights.feet} onChange={this.handlefeet} />
@@ -72,19 +64,10 @@ class Maincomp extends React.Component {
 			<br/> <br/>
 			<label> Enter the Height in cms </label>
 			<input type="text" value={this.state.weights.cms}  />
-		
-			
-
 			</form>
-
-
 			);
 	}
 }
-
-
-
-
 
 const list = {kgs:"", pounds:"",feet:"",inchs:"",cms:""}
 
